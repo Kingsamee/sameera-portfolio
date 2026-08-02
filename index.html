@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welikandage Sameera Lakmal — IT Infrastructure & Network Engineer</title>
+<meta name="description" content="Portfolio of Welikandage Sameera Lakmal — IT Infrastructure Engineer, Network Administrator & Cybersecurity professional based in Kalutara, Sri Lanka. 8+ years across enterprise network design, Active Directory, Microsoft 365, firewalls and virtualization.">
+<meta name="keywords" content="Sameera Lakmal, Network Engineer Sri Lanka, IT Infrastructure Engineer, System Administrator, Cybersecurity, Network Administrator Kalutara">
+<meta name="author" content="Welikandage Sameera Lakmal">
+<meta name="robots" content="index, follow">
+<!-- Open Graph -->
+<meta property="og:title" content="Welikandage Sameera Lakmal — IT Infrastructure & Network Engineer">
+<meta property="og:description" content="8+ years in enterprise networks, systems administration & cybersecurity. Explore projects, certifications and experience.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/images/profile.jpg">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Tailwind (utility layer only — visual identity lives in style.css) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- AOS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-theme="dark" class="antialiased">
+
+<!-- ================= LOADER ================= -->
+<div id="loader">
+  <span class="font-mono text-[.75rem] tracking-[.2em]" style="color:var(--text-muted)">ESTABLISHING CONNECTION…</span>
+  <div class="loader-bar"><span></span></div>
+</div>
+
+<div id="scroll-progress"></div>
+<div class="grid-field"></div>
+
+<!-- ================= NAVBAR ================= -->
+<header id="navbar" class="fixed top-0 inset-x-0 z-50">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-5 md:px-8 py-4">
+    <a href="#home" class="font-display font-semibold text-lg tracking-wide" style="color:var(--text)">
+      WSL<span class="text-signal">.</span><span class="font-mono text-xs align-top" style="color:var(--text-faint)">net</span>
+    </a>
+    <ul class="hidden lg:flex items-center gap-8">
+      <li><a href="#home" class="nav-link active">HOME</a></li>
+      <li><a href="#about" class="nav-link">ABOUT</a></li>
+      <li><a href="#skills" class="nav-link">SKILLS</a></li>
+      <li><a href="#experience" class="nav-link">EXPERIENCE</a></li>
+      <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+      <li><a href="#certifications" class="nav-link">CERTS</a></li>
+      <li><a href="#training" class="nav-link">TRAINING</a></li>
+      <li><a href="#gallery" class="nav-link">GALLERY</a></li>
+      <li><a href="#contact" class="nav-link">CONTACT</a></li>
+    </ul>
+    <div class="flex items-center gap-3">
+      <button id="theme-toggle" aria-label="Toggle color theme" class="w-10 h-10 flex items-center justify-center rounded border" style="border-color:var(--border-strong); color:var(--signal)">
+        <i class="fa-solid fa-moon text-sm" id="theme-icon"></i>
+      </button>
+      <a href="#contact" class="btn btn-primary hidden md:inline-flex">HIRE_ME</a>
+      <button id="menu-toggle" class="lg:hidden w-10 h-10 flex items-center justify-center rounded border" style="border-color:var(--border-strong)">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  <!-- mobile menu -->
+  <div id="mobile-menu" class="lg:hidden hidden flex-col px-5 pb-6 gap-4" style="background:var(--bg)">
+    <a href="#home" class="nav-link">HOME</a>
+    <a href="#about" class="nav-link">ABOUT</a>
+    <a href="#skills" class="nav-link">SKILLS</a>
+    <a href="#experience" class="nav-link">EXPERIENCE</a>
+    <a href="#projects" class="nav-link">PROJECTS</a>
+    <a href="#certifications" class="nav-link">CERTS</a>
+    <a href="#training" class="nav-link">TRAINING</a>
+    <a href="#gallery" class="nav-link">GALLERY</a>
+    <a href="#services" class="nav-link">SERVICES</a>
+    <a href="#contact" class="nav-link">CONTACT</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="relative pt-24 md:pt-28 pb-16 px-5 md:px-8 overflow-hidden">
+  <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-14 items-start relative z-10">
+    <!-- left: identity -->
+    <div data-aos="fade-up">
+      <p class="eyebrow mb-6">SESSION ESTABLISHED · KALUTARA, LK</p>
+      <h1 class="font-display font-bold leading-[1.05] text-4xl md:text-6xl mb-5" style="color:var(--text)">
+        WELIKANDAGE<br>SAMEERA <span class="text-signal">LAKMAL</span>
+      </h1>
+      <div class="font-mono text-lg md:text-xl mb-6" style="color:var(--text-muted)">
+        <span style="color:var(--signal)">&gt;</span> <span id="typed"></span><span class="animate-pulse" style="color:var(--signal)">_</span>
+      </div>
+      <p class="max-w-lg mb-9 leading-relaxed" style="color:var(--text-muted)">
+        IT professional with 8+ years designing, deploying and securing enterprise networks
+        across government and private-sector environments — from routing &amp; switching to
+        Active Directory, Microsoft 365 and endpoint security.
+      </p>
+      <div class="flex flex-wrap gap-4 mb-14">
+        <a href="assets/documents/Welikandage_Sameera_Lakmal_CV.pdf" download class="btn btn-primary">
+          <i class="fa-solid fa-download"></i> DOWNLOAD_CV
+        </a>
+        <a href="#contact" class="btn btn-outline"><i class="fa-regular fa-envelope"></i> CONTACT_ME</a>
+        <a href="#projects" class="btn btn-outline"><i class="fa-solid fa-diagram-project"></i> VIEW_WORK</a>
+      </div>
+
+      <!-- social row -->
+      <div class="flex gap-3 mb-10">
+        <a href="#" class="social-icon" title="LinkedIn (add your URL)"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon" title="GitHub (add your URL)"><i class="fa-brands fa-github"></i></a>
+        <a href="#" class="social-icon" title="Credly (add your URL)"><i class="fa-solid fa-award"></i></a>
+        <a href="https://wa.me/94713249244" target="_blank" rel="noopener" class="social-icon" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+
+      <!-- status strip -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="panel stat-card p-4">
+          <div class="flex items-center gap-2 mb-2"><span class="led led-online"></span><span class="font-mono text-xs tracking-wide" style="color:var(--text-faint)">EXP</span></div>
+          <div class="stat-num text-3xl md:text-4xl" data-count="8">0</div>
+          <div class="font-mono text-xs mt-1" style="color:var(--text-faint)">+ YEARS</div>
+        </div>
+        <div class="panel stat-card p-4">
+          <div class="flex items-center gap-2 mb-2"><span class="led led-online"></span><span class="font-mono text-xs tracking-wide" style="color:var(--text-faint)">CERT</span></div>
+          <div class="stat-num text-3xl md:text-4xl" data-count="20">0</div>
+          <div class="font-mono text-xs mt-1" style="color:var(--text-faint)">+ EARNED</div>
+        </div>
+        <div class="panel stat-card p-4">
+          <div class="flex items-center gap-2 mb-2"><span class="led led-online"></span><span class="font-mono text-xs tracking-wide" style="color:var(--text-faint)">PROJ</span></div>
+          <div class="stat-num text-3xl md:text-4xl" data-count="10">0</div>
+          <div class="font-mono text-xs mt-1" style="color:var(--text-faint)">+ DELIVERED</div>
+        </div>
+        <div class="panel stat-card p-4">
+          <div class="flex items-center gap-2 mb-2"><span class="led led-online"></span><span class="font-mono text-xs tracking-wide" style="color:var(--text-faint)">USERS</span></div>
+          <div class="stat-num text-3xl md:text-4xl" data-count="1000">0</div>
+          <div class="font-mono text-xs mt-1" style="color:var(--text-faint)">+ SUPPORTED</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- right: profile photo -->
+    <div class="relative" data-aos="fade-left" data-aos-delay="150">
+
+      <!-- profile photo panel -->
+      <div class="panel p-5 md:p-6">
+        <div class="flex items-center justify-between mb-4 font-mono text-[.7rem]" style="color:var(--text-faint)">
+          <span>profile.jpg</span>
+          <span class="flex items-center gap-1"><span class="led led-online"></span> ONLINE</span>
+        </div>
+        <div class="relative">
+          <img src="assets/images/profile.jpg" alt="Welikandage Sameera Lakmal" class="w-full max-h-[440px] object-cover rounded-sm">
+          <span class="absolute top-3 left-3 panel px-3 py-1.5 font-mono text-[.65rem]" style="color:var(--signal)">8+ YRS EXP</span>
+          <span class="absolute bottom-3 right-3 panel px-3 py-1.5 font-mono text-[.65rem]" style="color:var(--text-muted)">Network Engineer</span>
+        </div>
+        <div class="hairline my-4"></div>
+        <div class="flex items-center justify-between font-mono text-[.65rem]" style="color:var(--text-faint)">
+          <span>Kalutara, LK</span>
+          <span class="text-signal">AVAILABLE FOR HIRE</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="relative py-24 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <p class="eyebrow mb-3">$ whoami</p>
+    <h2 class="section-title text-3xl md:text-4xl mb-14">About Me</h2>
+
+    <div class="grid lg:grid-cols-5 gap-12">
+      <div class="lg:col-span-2" data-aos="fade-right">
+        <div class="panel p-2 max-w-sm">
+          <img src="assets/images/profile.jpg" alt="Welikandage Sameera Lakmal" class="w-full rounded-sm grayscale-[10%]">
+        </div>
+        <div class="mt-6 space-y-3 font-mono text-sm" style="color:var(--text-muted)">
+          <div class="flex justify-between border-b pb-2" style="border-color:var(--border)"><span style="color:var(--text-faint)">LOCATION</span><span>Kalutara District, LK</span></div>
+          <div class="flex justify-between border-b pb-2" style="border-color:var(--border)"><span style="color:var(--text-faint)">ROLE</span><span>IT Assistant, ITRDA</span></div>
+          <div class="flex justify-between border-b pb-2" style="border-color:var(--border)"><span style="color:var(--text-faint)">LANGUAGES</span><span>Sinhala, English</span></div>
+          <div class="flex justify-between"><span style="color:var(--text-faint)">STATUS</span><span class="text-signal flex items-center gap-2"><span class="led led-online"></span>Open to opportunities</span></div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-3" data-aos="fade-left">
+        <p class="text-lg leading-relaxed mb-6" style="color:var(--text)">
+          IT professional with over 8 years of experience across public and private sector
+          organizations, specialising in Windows Server administration, Active Directory,
+          Microsoft 365, network infrastructure and cybersecurity.
+        </p>
+        <p class="leading-relaxed mb-6" style="color:var(--text-muted)">
+          Holds a BSc (Hons) in Computer Networks and Security from Wrexham University (UK),
+          alongside an HND in Information Technology and CCNA certification. Proven track
+          record administering enterprise systems, managing firewalls, delivering SMB-level
+          projects, implementing endpoint protection, coordinating vendors and maintaining
+          business continuity through structured backup and disaster-recovery practice.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="panel p-5 panel-hover">
+            <i class="fa-solid fa-bullseye text-signal mb-3"></i>
+            <h3 class="font-display font-semibold mb-2" style="color:var(--text)">Mission</h3>
+            <p class="text-sm" style="color:var(--text-muted)">Keep critical infrastructure running — reliable, secure, well-documented, and built to scale with the organisation.</p>
+          </div>
+          <div class="panel p-5 panel-hover">
+            <i class="fa-solid fa-shield-halved text-signal mb-3"></i>
+            <h3 class="font-display font-semibold mb-2" style="color:var(--text)">Core Values</h3>
+            <p class="text-sm" style="color:var(--text-muted)">Precision in documentation, ownership of every ticket, and security treated as a default — not an afterthought.</p>
+          </div>
+        </div>
+
+        <!-- journey timeline (compact) -->
+        <div class="mt-10">
+          <h3 class="font-mono text-xs tracking-[.15em] mb-5" style="color:var(--text-faint)">PROFESSIONAL JOURNEY</h3>
+          <div class="flex flex-wrap gap-x-8 gap-y-4 font-mono text-xs" style="color:var(--text-muted)">
+            <div><span class="text-signal">2015</span> · SLT Network Technician</div>
+            <div><span class="text-signal">2016</span> · Luminex Technician</div>
+            <div><span class="text-signal">2018</span> · Cable & ICT Technician</div>
+            <div><span class="text-signal">2020</span> · IT Assistant, ITRDA</div>
+            <div><span class="text-signal">2025</span> · Acting Network Administrator</div>
+            <div><span class="text-signal">2026</span> · IT Assistant (Present)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="relative py-24 px-5 md:px-8" style="background:var(--bg-soft)">
+  <div class="max-w-7xl mx-auto">
+    <p class="eyebrow mb-3">$ skills --list</p>
+    <h2 class="section-title text-3xl md:text-4xl mb-14">Technical Skills</h2>
+
+    <p class="font-mono text-xs mb-10" style="color:var(--text-faint)">// 2 more topics coming — update planned</p>
+
+    <div class="grid md:grid-cols-2 gap-x-16 gap-y-10">
+      <!-- Networking -->
+      <div data-aos="fade-up">
+        <h3 class="font-mono text-xs tracking-[.15em] mb-5 flex items-center gap-2" style="color:var(--text-faint)"><i class="fa-solid fa-network-wired text-signal"></i> NETWORKING</h3>
+        <div class="space-y-3">
+          <div class="skill-row" data-percent="95"><div class="flex justify-between text-sm mb-2"><span style="color:var(--text)">Cisco Routing &amp; Switching</span><span class="skill-percent text-xs text-signal">95%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+          <div class="skill-row" data-percent="95"><div class="flex justify-between text-sm mb-2"><span style="color:var(--text)">TCP/IP, VLAN, DNS, DHCP</span><span class="skill-percent text-xs text-signal">95%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+          <div class="skill-row" data-percent="85"><div class="flex justify-between text-sm mb-2"><span style="color:var(--text)">VPN &amp; Remote Connectivity</span><span class="skill-percent text-xs text-signal">85%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+          <div class="skill-row" data-percent="88"><div class="flex justify-between text-sm mb-2"><span style="color:var(--text)">Fiber &amp; Structured Cabling</span><span class="skill-percent text-xs text-signal">88%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+        </div>
+      </div>
+      <!-- Systems -->
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h3 class="font-mono text-xs tracking-[.15em] mb-5 flex items-center gap-2" style="color:var(--text-faint)"><i class="fa-solid fa-server text-signal"></i> SYSTEMS &amp; CLOUD</h3>
+        <div class="space-y-3">
+          <div class="skill-row" data-percent="92"><div class="flex justify-between text-sm mb-2"><span style="color:var(--text)">Windows Server Administration</span><span class="skill-percent text-xs text-signal">92%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+          <div class="skill-row" data-percent="92"><div class="flex justify-between text-sm mb-2"><span style="color:var(--text)">Active Directory &amp; Group Policy</span><span class="skill-percent text-xs text-signal">92%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+          <div class="skill-row" data-percent="85"><div class="flex justify-between text-sm mb-2"><span style="color:var(--text)">Microsoft 365 &amp; Azure</span><span class="skill-percent text-xs text-signal">85%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+          <div class="skill-row" data-percent="75"><div class="flex justify-between text-sm mb-2"><span style="color:var(--text)">VMware / Hyper-V Virtualization</span><span class="skill-percent text-xs text-signal">75%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+          <div class="skill-row" data-percent="78"><div class="flex justify-between text-sm mb-2"><span style="color:var(--text)">Google Cloud</span><span class="skill-percent text-xs text-signal">78%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+        </div>
+      </div>
+      <!-- Security -->
+      <div data-aos="fade-up">
+        <h3 class="font-mono text-xs tracking-[.15em] mb-5 flex items-center gap-2" style="color:var(--text-faint)"><i class="fa-solid fa-shield-halved text-signal"></i> CYBERSECURITY</h3>
+        <div class="space-y-3">
+          <div class="skill-row" data-percent="86"><div class="flex justify-between text-sm mb-2"><span style="color:var(--text)">Cisco ASA / Firepower Firewalls</span><span class="skill-percent text-xs text-signal">86%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+          <div class="skill-row" data-percent="85"><div class="flex justify-between text-sm mb-2"><span style="color:var(--text)">Endpoint Security (Kaspersky)</span><span class="skill-percent text-xs text-signal">85%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+          <div class="skill-row" data-percent="88"><div class="flex justify-between text-sm mb-2"><span style="color:var(--text)">Backup &amp; Disaster Recovery</span><span class="skill-percent text-xs text-signal">88%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+        </div>
+      </div>
+      <!-- Operations -->
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h3 class="font-mono text-xs tracking-[.15em] mb-5 flex items-center gap-2" style="color:var(--text-faint)"><i class="fa-solid fa-clipboard-list text-signal"></i> OPERATIONS</h3>
+        <div class="space-y-3">
+          <div class="skill-row" data-percent="90"><div class="flex justify-between text-sm mb-2"><span style="color:var(--text)">IT Asset &amp; Vendor Management</span><span class="skill-percent text-xs text-signal">90%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+          <div class="skill-row" data-percent="80"><div class="flex justify-between text-sm mb-2"><span style="color:var(--text)">SCCM Software Deployment</span><span class="skill-percent text-xs text-signal">80%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+          <div class="skill-row" data-percent="92"><div class="flex justify-between text-sm mb-2"><span style="color:var(--text)">Technical Documentation</span><span class="skill-percent text-xs text-signal">92%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" class="relative py-24 px-5 md:px-8">
+  <div class="max-w-4xl mx-auto">
+    <p class="eyebrow mb-3">$ experience --timeline</p>
+    <h2 class="section-title text-3xl md:text-4xl mb-4">Work Experience</h2>
+    <p class="mb-14 font-mono text-xs" style="color:var(--text-faint)"><span class="led led-online" style="display:inline-block"></span> current &nbsp; <span class="led led-acting" style="display:inline-block"></span> acting role &nbsp; <span class="led led-idle" style="display:inline-block"></span> completed</p>
+
+    <div class="timeline space-y-10">
+      <div class="timeline-item" data-aos="fade-up">
+        <div class="timeline-dot"><span class="led led-online"></span></div>
+        <div class="panel p-6 panel-hover">
+          <div class="flex flex-wrap justify-between gap-2 mb-2">
+            <h3 class="font-display font-semibold" style="color:var(--text)">IT Assistant</h3>
+            <span class="font-mono text-xs text-signal">MAY 2026 — PRESENT</span>
+          </div>
+          <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">Information Technology Resources Development Authority — W.P</p>
+          <ul class="text-sm space-y-1.5 list-disc list-inside" style="color:var(--text-muted)">
+            <li>Continues enterprise system, network and end-user technical support after completing the acting Network Administrator assignment.</li>
+            <li>Supports Active Directory Services, LAN/WLAN administration, firewall & endpoint security monitoring, and IT asset/vendor coordination across multiple government sites.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-up">
+        <div class="timeline-dot"><span class="led led-acting"></span></div>
+        <div class="panel p-6 panel-hover">
+          <div class="flex flex-wrap justify-between gap-2 mb-2">
+            <h3 class="font-display font-semibold" style="color:var(--text)">Network Administrator <span class="text-amber font-mono text-xs">(Acting)</span></h3>
+            <span class="font-mono text-xs text-amber">NOV 2025 — APR 2026</span>
+          </div>
+          <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">Information Technology Resources Development Authority — W.P</p>
+          <ul class="text-sm space-y-1.5 list-disc list-inside" style="color:var(--text-muted)">
+            <li>Administered enterprise systems and Active Directory Services; deployed software via SCCM; planned and maintained LAN/WLAN networks across multiple government institutions.</li>
+            <li>Led ICT project implementation end-to-end; managed vendors through SLAs; prepared technical specifications and oversaw IT asset lifecycle & procurement.</li>
+            <li>Monitored firewall systems (Firepower Management Center) and endpoint security (Kaspersky); managed telecom, CCTV and PABX systems.</li>
+            <li>Implemented data storage/analysis systems, ran user training programs, and maintained technical documentation.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-up">
+        <div class="timeline-dot"><span class="led led-idle"></span></div>
+        <div class="panel p-6 panel-hover">
+          <div class="flex flex-wrap justify-between gap-2 mb-2">
+            <h3 class="font-display font-semibold" style="color:var(--text)">IT Assistant</h3>
+            <span class="font-mono text-xs" style="color:var(--text-faint)">OCT 2020 — OCT 2025</span>
+          </div>
+          <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">Information Technology Resources Development Authority — W.P</p>
+          <ul class="text-sm space-y-1.5 list-disc list-inside" style="color:var(--text-muted)">
+            <li>Delivered day-to-day IT support: system administration, network connectivity, hardware/software troubleshooting and helpdesk assistance across government sites.</li>
+            <li>Assisted with IT asset tracking, technical documentation and vendor coordination ahead of promotion to the acting Network Administrator role.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-up">
+        <div class="timeline-dot"><span class="led led-idle"></span></div>
+        <div class="panel p-6 panel-hover">
+          <div class="flex flex-wrap justify-between gap-2 mb-2">
+            <h3 class="font-display font-semibold" style="color:var(--text)">Cable & ICT Technician</h3>
+            <span class="font-mono text-xs" style="color:var(--text-faint)">AUG 2018 — SEP 2020</span>
+          </div>
+          <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">P.K.T Constructions</p>
+          <ul class="text-sm space-y-1.5 list-disc list-inside" style="color:var(--text-muted)">
+            <li>Installed, configured and maintained routers, switches and network devices; managed fiber optic and copper cabling for high-speed internet and PEO TV solutions.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-up">
+        <div class="timeline-dot"><span class="led led-idle"></span></div>
+        <div class="panel p-6 panel-hover">
+          <div class="flex flex-wrap justify-between gap-2 mb-2">
+            <h3 class="font-display font-semibold" style="color:var(--text)">Telecommunication & Network Technician</h3>
+            <span class="font-mono text-xs" style="color:var(--text-faint)">MAY 2016 — FEB 2018</span>
+          </div>
+          <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">Luminex (Pvt) Ltd</p>
+          <ul class="text-sm space-y-1.5 list-disc list-inside" style="color:var(--text-muted)">
+            <li>Maintained overhead and underground cable systems; supported project coordination and compliance with technical standards.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-up">
+        <div class="timeline-dot"><span class="led led-idle"></span></div>
+        <div class="panel p-6 panel-hover">
+          <div class="flex flex-wrap justify-between gap-2 mb-2">
+            <h3 class="font-display font-semibold" style="color:var(--text)">Telecommunication & Network Technician</h3>
+            <span class="font-mono text-xs" style="color:var(--text-faint)">MAR 2015 — MAY 2016</span>
+          </div>
+          <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">Sri Lanka Telecom PLC</p>
+          <ul class="text-sm space-y-1.5 list-disc list-inside" style="color:var(--text-muted)">
+            <li>Supported network infrastructure management, telecom system administration, system integration and performance optimisation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="relative py-24 px-5 md:px-8" style="background:var(--bg-soft)">
+  <div class="max-w-7xl mx-auto">
+    <p class="eyebrow mb-3">$ projects --ls</p>
+    <h2 class="section-title text-3xl md:text-4xl mb-14">Key Project Implementations</h2>
+
+    <p class="font-mono text-xs mb-8" style="color:var(--text-faint)">// click a project to view full details</p>
+
+    <div class="grid md:grid-cols-2 gap-6" id="project-grid">
+
+      <div class="project-card panel panel-hover overflow-hidden" data-aos="fade-up" onclick="openProject('p1')" tabindex="0" role="button" aria-label="View Data Network, CCTV & PABX System details">
+        <div class="relative">
+          <img src="https://picsum.photos/seed/wslproj1/800/500" class="w-full h-44 object-cover" alt="Data Network, CCTV & PABX System — Engineers Office, Mathugama" loading="lazy">
+          <span class="gallery-badge"><i class="fa-solid fa-images"></i> Gallery</span>
+          <span class="proj-status-badge">COMPLETED</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display font-semibold text-base mb-1" style="color:var(--text)">Data Network, CCTV &amp; PABX System</h3>
+          <p class="font-mono text-xs text-signal">Engineers Office, Mathugama</p>
+        </div>
+      </div>
+
+      <div class="project-card panel panel-hover overflow-hidden" data-aos="fade-up" data-aos-delay="100" onclick="openProject('p2')" tabindex="0" role="button" aria-label="View Multi-Site CCTV Installation details">
+        <div class="relative">
+          <img src="https://picsum.photos/seed/wslproj2/800/500" class="w-full h-44 object-cover" alt="Multi-Site CCTV Installation — Craft Lanka" loading="lazy">
+          <span class="gallery-badge"><i class="fa-solid fa-images"></i> Gallery</span>
+          <span class="proj-status-badge">COMPLETED</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display font-semibold text-base mb-1" style="color:var(--text)">Multi-Site CCTV Installation</h3>
+          <p class="font-mono text-xs text-signal">Craft Lanka — 10 Shops &amp; Stores</p>
+        </div>
+      </div>
+
+      <div class="project-card panel panel-hover overflow-hidden" data-aos="fade-up" onclick="openProject('p3')" tabindex="0" role="button" aria-label="View Data Network & PABX Integration details">
+        <div class="relative">
+          <img src="https://picsum.photos/seed/wslproj3/800/500" class="w-full h-44 object-cover" alt="Data Network & PABX Integration — Department of Revenue, Kalutara" loading="lazy">
+          <span class="gallery-badge"><i class="fa-solid fa-images"></i> Gallery</span>
+          <span class="proj-status-badge">COMPLETED</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display font-semibold text-base mb-1" style="color:var(--text)">Data Network &amp; PABX Integration</h3>
+          <p class="font-mono text-xs text-signal">Department of Revenue, Kalutara</p>
+        </div>
+      </div>
+
+      <div class="project-card panel panel-hover overflow-hidden" data-aos="fade-up" data-aos-delay="100" onclick="openProject('p4')" tabindex="0" role="button" aria-label="View PABX System Deployment details">
+        <div class="relative">
+          <img src="https://picsum.photos/seed/wslproj4/800/500" class="w-full h-44 object-cover" alt="PABX System Deployment — COOP Head Office & Waste Management Authority" loading="lazy">
+          <span class="gallery-badge"><i class="fa-solid fa-images"></i> Gallery</span>
+          <span class="proj-status-badge">COMPLETED</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display font-semibold text-base mb-1" style="color:var(--text)">PABX System Deployment</h3>
+          <p class="font-mono text-xs text-signal">COOP Head Office &amp; Waste Management Authority</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="mt-8 text-sm font-mono" style="color:var(--text-faint)">// sample images shown — swap with real project photos in assets/projects/</p>
+  </div>
+</section>
+
+<!-- ================= PROJECT MODAL ================= -->
+<div id="project-modal" class="fixed inset-0 z-[80] hidden items-center justify-center p-4" onclick="if(event.target===this) closeProject()">
+  <div class="panel max-w-lg w-full max-h-[85vh] overflow-y-auto p-6 md:p-8 relative">
+    <button onclick="closeProject()" aria-label="Close" class="absolute top-4 right-4 w-9 h-9 rounded flex items-center justify-center border" style="border-color:var(--border-strong); color:var(--text-muted)"><i class="fa-solid fa-xmark"></i></button>
+    <img id="pm-image" src="" alt="" class="w-full h-44 object-cover rounded mb-5">
+    <span id="pm-status" class="font-mono text-[.65rem] px-2 py-1 rounded border inline-block mb-3" style="border-color:var(--border-strong); color:var(--text-faint)">COMPLETED</span>
+    <h3 id="pm-title" class="font-display font-semibold text-xl mb-5" style="color:var(--text)"></h3>
+    <div class="space-y-4 text-sm" style="color:var(--text-muted)">
+      <div><p class="font-mono text-xs mb-1 text-signal">CLIENT</p><p id="pm-client"></p></div>
+      <div><p class="font-mono text-xs mb-1 text-signal">DESCRIPTION</p><p id="pm-desc"></p></div>
+      <div><p class="font-mono text-xs mb-1 text-signal">CHALLENGE</p><p id="pm-challenge"></p></div>
+      <div><p class="font-mono text-xs mb-1 text-signal">SOLUTION</p><p id="pm-solution"></p></div>
+      <div><p class="font-mono text-xs mb-1 text-signal">OUTCOME</p><p id="pm-outcome"></p></div>
+      <div><p class="font-mono text-xs mb-1 text-signal">TECHNOLOGIES</p><div id="pm-tech" class="flex flex-wrap gap-2"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= CERTIFICATIONS ================= -->
+<section id="certifications" class="relative py-24 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <p class="eyebrow mb-3">$ credentials --verify</p>
+    <h2 class="section-title text-3xl md:text-4xl mb-2">Credentials & Qualifications</h2>
+    <p class="font-mono text-xs mb-8" style="color:var(--text-faint)">// certifications, education & professional memberships — click "view certificate" to verify</p>
+
+    <!-- filters -->
+    <div class="flex flex-wrap gap-2 mb-10" id="cert-filters">
+      <span class="filter-pill active" data-filter="all">ALL</span>
+      <span class="filter-pill" data-filter="networking">NETWORKING</span>
+      <span class="filter-pill" data-filter="security">CYBER SECURITY</span>
+      <span class="filter-pill" data-filter="cloud">CLOUD</span>
+      <span class="filter-pill" data-filter="ms">MICROSOFT</span>
+      <span class="filter-pill" data-filter="membership">MEMBERSHIP</span>
+      <span class="filter-pill" data-filter="other">OTHER</span>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="cert-grid">
+      <!-- education first -->
+      <div class="cert-card panel p-5 panel-hover" data-cat="other" data-aos="fade-up">
+        <i class="fa-solid fa-graduation-cap text-signal mb-3"></i>
+        <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">BSc (Hons) Computer Networks & Security</h3>
+        <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">Wrexham University, UK</p>
+        <a href="assets/certificates/bsc-computer-networks-security.pdf" target="_blank" class="cert-verify"><i class="fa-solid fa-circle-check"></i> VIEW CERTIFICATE</a>
+      </div>
+      <div class="cert-card panel p-5 panel-hover" data-cat="other" data-aos="fade-up">
+        <i class="fa-solid fa-graduation-cap text-signal mb-3"></i>
+        <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">HND in Information Technology</h3>
+        <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">SLIATE</p>
+        <a href="assets/certificates/hnd-information-technology.pdf" target="_blank" class="cert-verify"><i class="fa-solid fa-circle-check"></i> VIEW CERTIFICATE</a>
+      </div>
+      <div class="cert-card panel p-5 panel-hover" data-cat="networking" data-aos="fade-up">
+        <i class="fa-solid fa-certificate text-signal mb-3"></i>
+        <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">CCNA — Cisco Certified Network Associate</h3>
+        <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">National Youth Services Council</p>
+        <a href="assets/certificates/ccna.pdf" target="_blank" class="cert-verify"><i class="fa-solid fa-circle-check"></i> VIEW CERTIFICATE</a>
+      </div>
+      <div class="cert-card panel p-5 panel-hover" data-cat="networking" data-aos="fade-up">
+        <i class="fa-solid fa-certificate text-signal mb-3"></i>
+        <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">Diploma in Linux Network Administration</h3>
+        <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">&nbsp;</p>
+        <a href="assets/certificates/diploma-linux-network-administration.pdf" target="_blank" class="cert-verify"><i class="fa-solid fa-circle-check"></i> VIEW CERTIFICATE</a>
+      </div>
+      <div class="cert-card panel p-5 panel-hover" data-cat="networking" data-aos="fade-up">
+        <i class="fa-solid fa-certificate text-signal mb-3"></i>
+        <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">Diploma in Hardware & Networking</h3>
+        <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">&nbsp;</p>
+        <a href="assets/certificates/diploma-hardware-networking.pdf" target="_blank" class="cert-verify"><i class="fa-solid fa-circle-check"></i> VIEW CERTIFICATE</a>
+      </div>
+      <div class="cert-card panel p-5 panel-hover" data-cat="networking" data-aos="fade-up">
+        <i class="fa-solid fa-certificate text-signal mb-3"></i>
+        <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">Data Center & Networking Administration</h3>
+        <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">VTC</p>
+        <a href="assets/certificates/data-center-networking-administration.pdf" target="_blank" class="cert-verify"><i class="fa-solid fa-circle-check"></i> VIEW CERTIFICATE</a>
+      </div>
+      <div class="cert-card panel p-5 panel-hover" data-cat="security" data-aos="fade-up">
+        <i class="fa-solid fa-shield-halved text-signal mb-3"></i>
+        <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">CompTIA Security+</h3>
+        <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">KodeKloud</p>
+        <a href="assets/certificates/comptia-security-plus.pdf" target="_blank" class="cert-verify"><i class="fa-solid fa-circle-check"></i> VIEW CERTIFICATE</a>
+      </div>
+      <div class="cert-card panel p-5 panel-hover" data-cat="security" data-aos="fade-up">
+        <i class="fa-solid fa-shield-halved text-signal mb-3"></i>
+        <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">Certified in Cybersecurity (CC)</h3>
+        <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">ISC2</p>
+        <a href="assets/certificates/isc2-cc.pdf" target="_blank" class="cert-verify"><i class="fa-solid fa-circle-check"></i> VIEW CERTIFICATE</a>
+      </div>
+      <div class="cert-card panel p-5 panel-hover" data-cat="cloud" data-aos="fade-up">
+        <i class="fa-solid fa-cloud text-signal mb-3"></i>
+        <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">Google Cloud Certification</h3>
+        <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">Google</p>
+        <a href="assets/certificates/google-cloud-certification.pdf" target="_blank" class="cert-verify"><i class="fa-solid fa-circle-check"></i> VIEW CERTIFICATE</a>
+      </div>
+      <div class="cert-card panel p-5 panel-hover" data-cat="cloud" data-aos="fade-up">
+        <i class="fa-solid fa-cloud text-signal mb-3"></i>
+        <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">Multi-Cloud Network Associate</h3>
+        <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">Aviatrix</p>
+        <a href="assets/certificates/multi-cloud-network-associate.pdf" target="_blank" class="cert-verify"><i class="fa-solid fa-circle-check"></i> VIEW CERTIFICATE</a>
+      </div>
+      <div class="cert-card panel p-5 panel-hover" data-cat="security" data-aos="fade-up">
+        <i class="fa-solid fa-shield-halved text-signal mb-3"></i>
+        <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">Web Protection Associate</h3>
+        <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">OPSWAT</p>
+        <a href="assets/certificates/web-protection-associate.pdf" target="_blank" class="cert-verify"><i class="fa-solid fa-circle-check"></i> VIEW CERTIFICATE</a>
+      </div>
+      <div class="cert-card panel p-5 panel-hover" data-cat="networking" data-aos="fade-up">
+        <i class="fa-solid fa-certificate text-signal mb-3"></i>
+        <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">EnGenius Certified Network Specialist</h3>
+        <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">&nbsp;</p>
+        <a href="assets/certificates/engenius-certified-network-specialist.pdf" target="_blank" class="cert-verify"><i class="fa-solid fa-circle-check"></i> VIEW CERTIFICATE</a>
+      </div>
+      <div class="cert-card panel p-5 panel-hover" data-cat="security" data-aos="fade-up">
+        <i class="fa-solid fa-shield-halved text-signal mb-3"></i>
+        <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">Intro to Critical Infrastructure Protection</h3>
+        <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">&nbsp;</p>
+        <a href="assets/certificates/critical-infrastructure-protection.pdf" target="_blank" class="cert-verify"><i class="fa-solid fa-circle-check"></i> VIEW CERTIFICATE</a>
+      </div>
+      <div class="cert-card panel p-5 panel-hover" data-cat="ms" data-aos="fade-up">
+        <i class="fa-brands fa-microsoft text-signal mb-3"></i>
+        <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">Microsoft Certified Technology Specialist</h3>
+        <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">MCTS</p>
+        <a href="assets/certificates/mcts.pdf" target="_blank" class="cert-verify"><i class="fa-solid fa-circle-check"></i> VIEW CERTIFICATE</a>
+      </div>
+      <div class="cert-card panel p-5 panel-hover" data-cat="other" data-aos="fade-up">
+        <i class="fa-solid fa-certificate text-signal mb-3"></i>
+        <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">Service Gateway ICT Staff Course</h3>
+        <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">UNICEF</p>
+        <a href="assets/certificates/service-gateway-ict-staff-course.pdf" target="_blank" class="cert-verify"><i class="fa-solid fa-circle-check"></i> VIEW CERTIFICATE</a>
+      </div>
+      <div class="cert-card panel p-5 panel-hover" data-cat="other" data-aos="fade-up">
+        <i class="fa-solid fa-code text-signal mb-3"></i>
+        <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">Programming in Python</h3>
+        <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">CODL, University of Moratuwa</p>
+        <a href="assets/certificates/python-programming.pdf" target="_blank" class="cert-verify"><i class="fa-solid fa-circle-check"></i> VIEW CERTIFICATE</a>
+      </div>
+      <div class="cert-card panel p-5 panel-hover" data-cat="other" data-aos="fade-up">
+        <i class="fa-solid fa-code text-signal mb-3"></i>
+        <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">Web Design for Beginners</h3>
+        <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">CODL, University of Moratuwa</p>
+        <a href="assets/certificates/web-design-beginners.pdf" target="_blank" class="cert-verify"><i class="fa-solid fa-circle-check"></i> VIEW CERTIFICATE</a>
+      </div>
+      <div class="cert-card panel p-5 panel-hover" data-cat="other" data-aos="fade-up">
+        <i class="fa-solid fa-print text-signal mb-3"></i>
+        <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">Diploma in Desktop Publishing</h3>
+        <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">&nbsp;</p>
+        <a href="assets/certificates/desktop-publishing-diploma.pdf" target="_blank" class="cert-verify"><i class="fa-solid fa-circle-check"></i> VIEW CERTIFICATE</a>
+      </div>
+      <!-- memberships -->
+      <div class="cert-card panel p-5 panel-hover" data-cat="membership" data-aos="fade-up">
+        <i class="fa-solid fa-id-badge text-signal mb-3"></i>
+        <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">Member, Computer Society of Sri Lanka</h3>
+        <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">CSSL</p>
+        <a href="assets/certificates/membership-cssl.pdf" target="_blank" class="cert-verify"><i class="fa-solid fa-circle-check"></i> VIEW CERTIFICATE</a>
+      </div>
+      <div class="cert-card panel p-5 panel-hover" data-cat="membership" data-aos="fade-up">
+        <i class="fa-solid fa-id-badge text-signal mb-3"></i>
+        <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">Member, Internet Society</h3>
+        <p class="font-mono text-xs mb-3" style="color:var(--text-faint)">ISOC</p>
+        <a href="assets/certificates/membership-isoc.pdf" target="_blank" class="cert-verify"><i class="fa-solid fa-circle-check"></i> VIEW CERTIFICATE</a>
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <button id="cert-see-more" class="btn btn-outline"><i class="fa-solid fa-chevron-down"></i> SEE MORE</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROFESSIONAL TRAINING ================= -->
+<section id="training" class="relative py-24 px-5 md:px-8" style="background:var(--bg-soft)">
+  <div class="max-w-7xl mx-auto">
+    <p class="eyebrow mb-3">$ training --log</p>
+    <h2 class="section-title text-3xl md:text-4xl mb-2">Professional Training</h2>
+    <p class="font-mono text-xs mb-10" style="color:var(--text-faint)">// hands-on courses, each backed by a certificate</p>
+
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div class="panel p-5 panel-hover flex items-center justify-between gap-4" data-aos="fade-up">
+        <div>
+          <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">CCNA Based Enterprise Network Implementation</h3>
+          <p class="font-mono text-xs" style="color:var(--text-faint)">Sri Lanka Telecom Training Centre · 2023</p>
+        </div>
+        <a href="assets/certificates/training-ccna-enterprise-network.pdf" target="_blank" class="cert-verify flex-shrink-0"><i class="fa-solid fa-circle-check"></i> VIEW</a>
+      </div>
+      <div class="panel p-5 panel-hover flex items-center justify-between gap-4" data-aos="fade-up" data-aos-delay="50">
+        <div>
+          <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">Optical Fiber Technology Training</h3>
+          <p class="font-mono text-xs" style="color:var(--text-faint)">Sri Lanka Telecom Training Centre · 2024</p>
+        </div>
+        <a href="assets/certificates/training-optical-fiber-technology.pdf" target="_blank" class="cert-verify flex-shrink-0"><i class="fa-solid fa-circle-check"></i> VIEW</a>
+      </div>
+      <div class="panel p-5 panel-hover flex items-center justify-between gap-4" data-aos="fade-up">
+        <div>
+          <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">Cloud Foundation for Aspiring IT Professionals</h3>
+          <p class="font-mono text-xs" style="color:var(--text-faint)">NextGen Campus · 2024</p>
+        </div>
+        <a href="assets/certificates/training-cloud-foundation.pdf" target="_blank" class="cert-verify flex-shrink-0"><i class="fa-solid fa-circle-check"></i> VIEW</a>
+      </div>
+      <div class="panel p-5 panel-hover flex items-center justify-between gap-4" data-aos="fade-up" data-aos-delay="50">
+        <div>
+          <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">ISC2 CC Online Self-Paced Training</h3>
+          <p class="font-mono text-xs" style="color:var(--text-faint)">ISC2 · 2023</p>
+        </div>
+        <a href="assets/certificates/training-isc2-cc-self-paced.pdf" target="_blank" class="cert-verify flex-shrink-0"><i class="fa-solid fa-circle-check"></i> VIEW</a>
+      </div>
+      <div class="panel p-5 panel-hover flex items-center justify-between gap-4" data-aos="fade-up">
+        <div>
+          <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">IT Procurements</h3>
+          <p class="font-mono text-xs" style="color:var(--text-faint)">ITRDA · 2026</p>
+        </div>
+        <a href="assets/certificates/training-it-procurements.pdf" target="_blank" class="cert-verify flex-shrink-0"><i class="fa-solid fa-circle-check"></i> VIEW</a>
+      </div>
+      <div class="panel p-5 panel-hover flex items-center justify-between gap-4" data-aos="fade-up" data-aos-delay="50">
+        <div>
+          <h3 class="font-semibold text-sm mb-1" style="color:var(--text)">In-Plant Training: IT & Network</h3>
+          <p class="font-mono text-xs" style="color:var(--text-faint)">Sri Lanka Telecom OPMC, Panadura · 2014</p>
+        </div>
+        <a href="assets/certificates/training-in-plant-slt-opmc.pdf" target="_blank" class="cert-verify flex-shrink-0"><i class="fa-solid fa-circle-check"></i> VIEW</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXTRA ACTIVITIES ================= -->
+<section id="achievements" class="relative py-24 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <p class="eyebrow mb-3">$ achievements --list</p>
+    <h2 class="section-title text-3xl md:text-4xl mb-14">Extra Activities</h2>
+
+    <div class="panel p-6 max-w-2xl" data-aos="fade-up">
+      <h3 class="font-mono text-xs tracking-[.15em] mb-4" style="color:var(--text-faint)">ROLES HELD</h3>
+      <ul class="space-y-3 text-sm" style="color:var(--text-muted)">
+        <li class="flex gap-3"><i class="fa-solid fa-users text-signal mt-1"></i> Chairman, United Trade and Industry Owners Association</li>
+        <li class="flex gap-3"><i class="fa-solid fa-users text-signal mt-1"></i> Secretary, ITRDA Welfare Association</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section id="gallery" class="relative py-24 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <p class="eyebrow mb-3">$ gallery --preview</p>
+    <h2 class="section-title text-3xl md:text-4xl mb-3">Photo Gallery</h2>
+    <p class="font-mono text-xs mb-10" style="color:var(--text-faint)">// sample layout — swap these with real site-visit & project photos</p>
+
+    <div class="flex flex-wrap gap-2 mb-8" id="gallery-filters">
+      <span class="filter-pill active" data-filter="all">ALL</span>
+      <span class="filter-pill" data-filter="site">SITE VISITS</span>
+      <span class="filter-pill" data-filter="datacenter">DATA CENTERS</span>
+      <span class="filter-pill" data-filter="training">TRAINING</span>
+      <span class="filter-pill" data-filter="office">OFFICE</span>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4" id="gallery-grid">
+      <div class="gallery-item panel overflow-hidden panel-hover" data-cat="site" data-aos="zoom-in"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=60" class="w-full h-48 object-cover" alt="Network site visit — structured cabling rack" loading="lazy"></div>
+      <div class="gallery-item panel overflow-hidden panel-hover" data-cat="datacenter" data-aos="zoom-in"><img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&q=60" class="w-full h-48 object-cover" alt="Server room / data center" loading="lazy"></div>
+      <div class="gallery-item panel overflow-hidden panel-hover" data-cat="training" data-aos="zoom-in"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=60" class="w-full h-48 object-cover" alt="Technical training session" loading="lazy"></div>
+      <div class="gallery-item panel overflow-hidden panel-hover" data-cat="office" data-aos="zoom-in"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=60" class="w-full h-48 object-cover" alt="Office IT workspace" loading="lazy"></div>
+      <div class="gallery-item panel overflow-hidden panel-hover" data-cat="site" data-aos="zoom-in"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&q=60" class="w-full h-48 object-cover" alt="Network switch installation" loading="lazy"></div>
+      <div class="gallery-item panel overflow-hidden panel-hover" data-cat="datacenter" data-aos="zoom-in"><img src="https://images.unsplash.com/photo-1591405351990-4726e331f141?w=600&q=60" class="w-full h-48 object-cover" alt="Data center cabling" loading="lazy"></div>
+      <div class="gallery-item panel overflow-hidden panel-hover" data-cat="training" data-aos="zoom-in"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=60" class="w-full h-48 object-cover" alt="IT workshop" loading="lazy"></div>
+      <div class="gallery-item panel overflow-hidden panel-hover" data-cat="office" data-aos="zoom-in"><img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=600&q=60" class="w-full h-48 object-cover" alt="Government office IT desk" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services" class="relative py-24 px-5 md:px-8" style="background:var(--bg-soft)">
+  <div class="max-w-7xl mx-auto">
+    <p class="eyebrow mb-3">$ services --offer</p>
+    <h2 class="section-title text-3xl md:text-4xl mb-14">Services</h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="panel p-6 panel-hover" data-aos="fade-up"><i class="fa-solid fa-diagram-project text-signal text-xl mb-4"></i><h3 class="font-display font-semibold mb-2" style="color:var(--text)">Network Design</h3><p class="text-sm" style="color:var(--text-muted)">LAN/WLAN topology, structured cabling & capacity planning.</p></div>
+      <div class="panel p-6 panel-hover" data-aos="fade-up" data-aos-delay="50"><i class="fa-solid fa-server text-signal text-xl mb-4"></i><h3 class="font-display font-semibold mb-2" style="color:var(--text)">System Administration</h3><p class="text-sm" style="color:var(--text-muted)">Windows Server, Active Directory & Microsoft 365 management.</p></div>
+      <div class="panel p-6 panel-hover" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-boxes-stacked text-signal text-xl mb-4"></i><h3 class="font-display font-semibold mb-2" style="color:var(--text)">Server Deployment</h3><p class="text-sm" style="color:var(--text-muted)">Physical & virtual server rollouts, migrations, and hardening.</p></div>
+      <div class="panel p-6 panel-hover" data-aos="fade-up" data-aos-delay="150"><i class="fa-solid fa-shield-halved text-signal text-xl mb-4"></i><h3 class="font-display font-semibold mb-2" style="color:var(--text)">Cyber Security</h3><p class="text-sm" style="color:var(--text-muted)">Firewall configuration, endpoint protection & security best practice.</p></div>
+      <div class="panel p-6 panel-hover" data-aos="fade-up"><i class="fa-solid fa-comments text-signal text-xl mb-4"></i><h3 class="font-display font-semibold mb-2" style="color:var(--text)">IT Consultancy</h3><p class="text-sm" style="color:var(--text-muted)">Infrastructure audits, vendor coordination & procurement guidance.</p></div>
+      <div class="panel p-6 panel-hover" data-aos="fade-up" data-aos-delay="50"><i class="fa-solid fa-cloud text-signal text-xl mb-4"></i><h3 class="font-display font-semibold mb-2" style="color:var(--text)">Cloud Solutions</h3><p class="text-sm" style="color:var(--text-muted)">Google Cloud & Azure-aligned deployments and migrations.</p></div>
+      <div class="panel p-6 panel-hover" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-file-lines text-signal text-xl mb-4"></i><h3 class="font-display font-semibold mb-2" style="color:var(--text)">Technical Documentation</h3><p class="text-sm" style="color:var(--text-muted)">Specifications, IT policy and operational reporting.</p></div>
+      <div class="panel p-6 panel-hover" data-aos="fade-up" data-aos-delay="150"><i class="fa-solid fa-video text-signal text-xl mb-4"></i><h3 class="font-display font-semibold mb-2" style="color:var(--text)">CCTV & PABX</h3><p class="text-sm" style="color:var(--text-muted)">Surveillance and telephony system design & deployment.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BLOG (placeholder) ================= -->
+<section id="blog" class="relative py-24 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto text-center">
+    <p class="eyebrow mb-3 justify-center">$ blog --status</p>
+    <h2 class="section-title text-3xl md:text-4xl mb-4">Blog</h2>
+    <p class="max-w-lg mx-auto mb-8" style="color:var(--text-muted)">Notes on networking, cybersecurity, Windows Server and cloud — writing in progress.</p>
+    <div class="panel inline-block px-8 py-6" data-aos="zoom-in">
+      <span class="led led-acting inline-block mr-2"></span>
+      <span class="font-mono text-sm text-amber">FIRST ARTICLES COMING SOON</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section id="testimonials" class="relative py-24 px-5 md:px-8" style="background:var(--bg-soft)">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="eyebrow mb-3 justify-center">$ references --verify</p>
+    <h2 class="section-title text-3xl md:text-4xl mb-8">References</h2>
+    <div class="panel p-10" data-aos="fade-up">
+      <i class="fa-solid fa-user-check text-signal text-2xl mb-4"></i>
+      <p class="leading-relaxed" style="color:var(--text-muted)">
+        Professional references from current and former supervisors — including at the
+        Information Technology Resources Development Authority — are available on request
+        during the hiring process.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="relative py-24 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <p class="eyebrow mb-3">$ contact --init</p>
+    <h2 class="section-title text-3xl md:text-4xl mb-14">Get In Touch</h2>
+
+    <div class="grid lg:grid-cols-5 gap-10">
+      <div class="lg:col-span-2 space-y-4" data-aos="fade-right">
+        <div class="panel p-5 flex items-center gap-4">
+          <span class="w-11 h-11 rounded flex items-center justify-center flex-shrink-0" style="background:var(--signal-dim)"><i class="fa-regular fa-envelope text-signal"></i></span>
+          <div><p class="font-mono text-[.65rem]" style="color:var(--text-faint)">EMAIL</p><a href="mailto:wslakmal@gmail.com" class="text-sm" style="color:var(--text)">wslakmal@gmail.com</a></div>
+        </div>
+        <div class="panel p-5 flex items-center gap-4">
+          <span class="w-11 h-11 rounded flex items-center justify-center flex-shrink-0" style="background:var(--signal-dim)"><i class="fa-solid fa-phone text-signal"></i></span>
+          <div><p class="font-mono text-[.65rem]" style="color:var(--text-faint)">PHONE</p><a href="tel:+94713249244" class="text-sm" style="color:var(--text)">+94 71 324 9244</a></div>
+        </div>
+        <div class="panel p-5 flex items-center gap-4">
+          <span class="w-11 h-11 rounded flex items-center justify-center flex-shrink-0" style="background:var(--signal-dim)"><i class="fa-solid fa-location-dot text-signal"></i></span>
+          <div><p class="font-mono text-[.65rem]" style="color:var(--text-faint)">LOCATION</p><span class="text-sm" style="color:var(--text)">Bombuwala, Kalutara, Sri Lanka</span></div>
+        </div>
+        <div class="flex gap-3 pt-2">
+          <a href="#" class="w-11 h-11 rounded border flex items-center justify-center" style="border-color:var(--border-strong); color:var(--text-muted)" title="LinkedIn (add your URL)"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="w-11 h-11 rounded border flex items-center justify-center" style="border-color:var(--border-strong); color:var(--text-muted)" title="GitHub (add your URL)"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="w-11 h-11 rounded border flex items-center justify-center" style="border-color:var(--border-strong); color:var(--text-muted)" title="Credly (add your URL)"><i class="fa-solid fa-award"></i></a>
+          <a href="https://wa.me/94713249244" target="_blank" rel="noopener" class="w-11 h-11 rounded border flex items-center justify-center" style="border-color:var(--border-strong); color:var(--text-muted)" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-3" data-aos="fade-left">
+        <form id="contact-form" class="panel p-6 md:p-8 space-y-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="font-mono text-[.7rem]" style="color:var(--text-faint)">NAME</label>
+              <input required type="text" name="name" class="w-full mt-2 px-4 py-3 rounded bg-transparent border text-sm" style="border-color:var(--border-strong); color:var(--text)">
+            </div>
+            <div>
+              <label class="font-mono text-[.7rem]" style="color:var(--text-faint)">EMAIL</label>
+              <input required type="email" name="email" class="w-full mt-2 px-4 py-3 rounded bg-transparent border text-sm" style="border-color:var(--border-strong); color:var(--text)">
+            </div>
+          </div>
+          <div>
+            <label class="font-mono text-[.7rem]" style="color:var(--text-faint)">SUBJECT</label>
+            <input required type="text" name="subject" class="w-full mt-2 px-4 py-3 rounded bg-transparent border text-sm" style="border-color:var(--border-strong); color:var(--text)">
+          </div>
+          <div>
+            <label class="font-mono text-[.7rem]" style="color:var(--text-faint)">MESSAGE</label>
+            <textarea required name="message" rows="5" class="w-full mt-2 px-4 py-3 rounded bg-transparent border text-sm" style="border-color:var(--border-strong); color:var(--text)"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-full sm:w-auto"><i class="fa-solid fa-paper-plane"></i> SEND_MESSAGE</button>
+          <p id="form-status" class="font-mono text-xs hidden"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="relative border-t px-5 md:px-8 py-10" style="border-color:var(--border)">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <p class="font-mono text-xs" style="color:var(--text-faint)">© <span id="year"></span> Welikandage Sameera Lakmal. All rights reserved.</p>
+    <ul class="flex flex-wrap gap-6 font-mono text-xs" style="color:var(--text-muted)">
+      <li><a href="#home" class="hover:text-signal">Home</a></li>
+      <li><a href="#about" class="hover:text-signal">About</a></li>
+      <li><a href="#projects" class="hover:text-signal">Projects</a></li>
+      <li><a href="#contact" class="hover:text-signal">Contact</a></li>
+    </ul>
+    <div class="flex gap-3">
+      <a href="#" class="social-icon w-9 h-9 text-xs" title="LinkedIn (add your URL)"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" class="social-icon w-9 h-9 text-xs" title="GitHub (add your URL)"><i class="fa-brands fa-github"></i></a>
+      <a href="#" class="social-icon w-9 h-9 text-xs" title="Credly (add your URL)"><i class="fa-solid fa-award"></i></a>
+      <a href="https://wa.me/94713249244" target="_blank" rel="noopener" class="social-icon w-9 h-9 text-xs" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </div>
+</footer>
+
+<a id="whatsapp-float" href="https://wa.me/94713249244" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp text-2xl"></i></a>
+<button id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

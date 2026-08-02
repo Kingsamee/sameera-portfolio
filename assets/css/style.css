@@ -1,0 +1,397 @@
+/* ==========================================================================
+   WSL // Portfolio — Blueprint Ops Theme
+   Design language: network schematic / NOC dashboard, grounded in the
+   subject's world (topology diagrams, patch panels, status LEDs, CLI).
+   ========================================================================== */
+
+:root{
+  /* -- dark (default) -- */
+  --bg:            #090D16;
+  --bg-soft:       #0D1322;
+  --panel:         #101830;
+  --panel-2:       #0C1224;
+  --grid-line:     rgba(126,150,196,0.08);
+  --border:        rgba(148,168,210,0.14);
+  --border-strong: rgba(148,168,210,0.28);
+
+  --text:          #E9EEF6;
+  --text-muted:    #8996B3;
+  --text-faint:    #576079;
+
+  --signal:        #3AD9C3;   /* teal-cyan — primary "live" accent */
+  --signal-dim:    rgba(58,217,195,0.14);
+  --amber:         #F5A623;   /* status / acting-role accent */
+  --amber-dim:     rgba(245,166,35,0.14);
+  --online:        #4ADE80;   /* current / active LED */
+  --danger:        #FF6B6B;
+
+  --font-display: 'Chakra Petch', sans-serif;
+  --font-body:    'Inter', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  --radius: 4px;
+  --shadow-panel: 0 20px 60px -20px rgba(0,0,0,0.6);
+}
+
+[data-theme="light"]{
+  --bg:            #F2F5FA;
+  --bg-soft:       #E9EEF6;
+  --panel:         #FFFFFF;
+  --panel-2:       #F6F8FC;
+  --grid-line:     rgba(30,50,90,0.06);
+  --border:        rgba(20,40,80,0.12);
+  --border-strong: rgba(20,40,80,0.22);
+
+  --text:          #0F1626;
+  --text-muted:    #4C5877;
+  --text-faint:    #8A96AC;
+
+  --signal:        #0F9C8F;
+  --signal-dim:    rgba(15,156,143,0.10);
+  --amber:         #C97A12;
+  --amber-dim:     rgba(201,122,18,0.12);
+  --online:        #16A34A;
+
+  --shadow-panel: 0 20px 50px -25px rgba(20,40,80,0.25);
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-body);
+  transition:background .35s ease, color .35s ease;
+  overflow-x:hidden;
+}
+
+/* -------------------- blueprint grid backdrop -------------------- */
+.grid-field{
+  position:fixed; inset:0; z-index:0; pointer-events:none;
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size:42px 42px;
+  mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 90%);
+}
+
+/* -------------------- typography -------------------- */
+.font-display{ font-family:var(--font-display); }
+.font-mono{ font-family:var(--font-mono); }
+
+.eyebrow{
+  font-family:var(--font-mono);
+  font-size:0.72rem;
+  letter-spacing:.12em;
+  color:var(--signal);
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  text-transform:none;
+}
+.eyebrow::before{
+  content:"";
+  width:7px; height:7px; border-radius:1px;
+  background:var(--signal);
+  box-shadow:0 0 10px var(--signal);
+  transform:rotate(45deg);
+  flex:0 0 auto;
+}
+
+.section-title{
+  font-family:var(--font-display);
+  font-weight:600;
+  letter-spacing:.01em;
+  color:var(--text);
+}
+
+/* -------------------- LED status dots (semantic, reused) -------------------- */
+.led{
+  width:8px; height:8px; border-radius:50%;
+  flex:0 0 auto;
+  box-shadow:0 0 0 3px transparent;
+}
+.led-online{ background:var(--online); box-shadow:0 0 10px var(--online); animation:pulse-led 2s infinite; }
+.led-acting{ background:var(--amber); box-shadow:0 0 10px var(--amber); }
+.led-idle{ background:var(--text-faint); }
+@keyframes pulse-led{
+  0%,100%{ opacity:1; }
+  50%{ opacity:.4; }
+}
+
+/* -------------------- glass / rack-unit panels -------------------- */
+.panel{
+  background:linear-gradient(180deg, var(--panel), var(--panel-2));
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  position:relative;
+  backdrop-filter:blur(14px);
+}
+.panel::before, .panel::after{
+  content:"";
+  position:absolute; width:10px; height:10px;
+  border-color:var(--border-strong);
+  border-style:solid;
+  opacity:.9;
+}
+.panel::before{ top:-1px; left:-1px; border-width:1.5px 0 0 1.5px; }
+.panel::after{ bottom:-1px; right:-1px; border-width:0 1.5px 1.5px 0; }
+
+.panel-hover{ transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
+.panel-hover:hover{
+  transform:translateY(-4px);
+  border-color:var(--signal);
+  box-shadow:0 20px 40px -20px rgba(58,217,195,0.25);
+}
+
+/* -------------------- buttons -------------------- */
+.btn{
+  font-family:var(--font-mono);
+  font-size:.82rem;
+  letter-spacing:.03em;
+  padding:.85rem 1.6rem;
+  border-radius:var(--radius);
+  display:inline-flex; align-items:center; gap:.6rem;
+  transition:all .25s ease;
+  white-space:nowrap;
+}
+.btn-primary{
+  background:var(--signal);
+  color:#04120F;
+  font-weight:600;
+  box-shadow:0 8px 24px -8px rgba(58,217,195,0.55);
+}
+.btn-primary:hover{ transform:translateY(-2px); box-shadow:0 14px 30px -10px rgba(58,217,195,0.7); }
+.btn-outline{
+  border:1px solid var(--border-strong);
+  color:var(--text);
+  background:transparent;
+}
+.btn-outline:hover{ border-color:var(--signal); color:var(--signal); transform:translateY(-2px); }
+
+/* -------------------- nav -------------------- */
+#navbar{
+  transition:background .3s ease, border-color .3s ease, padding .3s ease;
+  border-bottom:1px solid transparent;
+}
+#navbar.scrolled{
+  background:color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+.nav-link{
+  position:relative;
+  font-family:var(--font-mono);
+  font-size:.8rem;
+  color:var(--text-muted);
+  transition:color .2s ease;
+}
+.nav-link::after{
+  content:"";
+  position:absolute; left:0; bottom:-6px;
+  width:0; height:1px; background:var(--signal);
+  transition:width .25s ease;
+}
+.nav-link:hover, .nav-link.active{ color:var(--text); }
+.nav-link:hover::after, .nav-link.active::after{ width:100%; }
+
+/* -------------------- scroll progress + back to top -------------------- */
+#scroll-progress{
+  position:fixed; top:0; left:0; height:2px; width:0%;
+  background:var(--signal); z-index:60;
+  box-shadow:0 0 8px var(--signal);
+}
+#back-to-top{
+  position:fixed; right:1.5rem; bottom:1.5rem; z-index:50;
+  width:46px; height:46px;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--panel); border:1px solid var(--border-strong);
+  color:var(--signal); border-radius:var(--radius);
+  opacity:0; pointer-events:none; transform:translateY(10px);
+  transition:all .3s ease;
+}
+#back-to-top.show{ opacity:1; pointer-events:auto; transform:translateY(0); }
+#back-to-top:hover{ background:var(--signal); color:#04120F; }
+
+/* -------------------- floating whatsapp -------------------- */
+#whatsapp-float{
+  position:fixed; left:1.5rem; bottom:1.5rem; z-index:50;
+  width:52px; height:52px; border-radius:50%;
+  background:#25D366; color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 10px 30px -10px rgba(37,211,102,0.7);
+  animation:float-bob 3s ease-in-out infinite;
+}
+@keyframes float-bob{ 0%,100%{transform:translateY(0);} 50%{transform:translateY(-6px);} }
+
+/* -------------------- loading screen -------------------- */
+#loader{
+  position:fixed; inset:0; z-index:100;
+  background:var(--bg);
+  display:flex; align-items:center; justify-content:center; flex-direction:column; gap:1rem;
+  transition:opacity .5s ease, visibility .5s ease;
+}
+#loader.hide{ opacity:0; visibility:hidden; }
+.loader-bar{ width:220px; height:2px; background:var(--border); overflow:hidden; }
+.loader-bar span{ display:block; height:100%; width:0%; background:var(--signal); animation:load 1.4s ease forwards; }
+@keyframes load{ to{ width:100%; } }
+
+/* -------------------- hero network topology -------------------- */
+.topo-line{
+  stroke:var(--border-strong);
+  stroke-width:1;
+  fill:none;
+}
+.topo-pulse{
+  fill:var(--signal);
+  filter:drop-shadow(0 0 6px var(--signal));
+}
+.topo-node{
+  fill:var(--panel);
+  stroke:var(--border-strong);
+  stroke-width:1.5;
+}
+.topo-node-label{
+  font-family:var(--font-mono);
+  font-size:9px;
+  fill:var(--text-muted);
+}
+
+/* -------------------- skill progress bars (gradient fill) -------------------- */
+.skill-row{
+  background:var(--panel); border:1px solid var(--border);
+  border-radius:var(--radius); padding:1rem 1.1rem;
+}
+.skill-percent{ font-family:var(--font-mono); font-weight:600; }
+.skill-track{
+  height:8px; border-radius:99px; overflow:hidden;
+  background:var(--panel-2); border:1px solid var(--border);
+}
+.skill-fill{
+  height:100%; width:0%; border-radius:99px;
+  background:linear-gradient(90deg, #3B82F6, var(--signal));
+  box-shadow:0 0 10px rgba(58,217,195,0.5);
+  transition:width 1.3s cubic-bezier(.22,.9,.35,1);
+}
+
+/* -------------------- timeline -------------------- */
+.timeline{ position:relative; }
+.timeline::before{
+  content:""; position:absolute; left:9px; top:6px; bottom:6px; width:1px;
+  background:linear-gradient(var(--border-strong), transparent);
+}
+.timeline-item{ position:relative; padding-left:2.75rem; }
+.timeline-dot{
+  position:absolute; left:0; top:.4rem;
+  width:20px; height:20px; border-radius:50%;
+  background:var(--panel); border:1px solid var(--border-strong);
+  display:flex; align-items:center; justify-content:center;
+}
+
+/* -------------------- social icon buttons -------------------- */
+.social-icon{
+  width:44px; height:44px; border-radius:var(--radius);
+  border:1px solid var(--border-strong);
+  color:var(--text-muted);
+  display:flex; align-items:center; justify-content:center;
+  transition:all .25s ease;
+}
+.social-icon:hover{
+  border-color:var(--signal); color:var(--signal);
+  transform:translateY(-3px);
+  box-shadow:0 10px 20px -10px rgba(58,217,195,0.5);
+}
+
+/* -------------------- counters / stat cards -------------------- */
+.stat-num{ font-family:var(--font-mono); font-weight:700; color:var(--text); }
+.stat-card{
+  border-top:2px solid var(--signal);
+  background:linear-gradient(180deg, var(--signal-dim), var(--panel-2) 40%);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.stat-card:hover{ transform:translateY(-3px); box-shadow:0 16px 30px -18px rgba(58,217,195,0.5); }
+
+/* -------------------- gallery filter pills -------------------- */
+.filter-pill{
+  font-family:var(--font-mono); font-size:.75rem;
+  padding:.45rem 1rem; border-radius:99px;
+  border:1px solid var(--border-strong); color:var(--text-muted);
+  transition:all .2s ease; cursor:pointer;
+}
+.filter-pill.active, .filter-pill:hover{ background:var(--signal); color:#04120F; border-color:var(--signal); }
+
+/* -------------------- project cards + modal -------------------- */
+.project-card{ cursor:pointer; }
+.gallery-badge{
+  position:absolute; top:12px; right:12px;
+  font-family:var(--font-mono); font-size:.65rem;
+  display:flex; align-items:center; gap:.35rem;
+  padding:.35rem .7rem; border-radius:99px;
+  background:rgba(9,13,22,0.72); backdrop-filter:blur(6px);
+  color:var(--signal); border:1px solid rgba(58,217,195,0.35);
+}
+.proj-status-badge{
+  position:absolute; top:12px; left:12px;
+  font-family:var(--font-mono); font-size:.6rem; letter-spacing:.05em;
+  padding:.3rem .6rem; border-radius:3px;
+  background:rgba(9,13,22,0.72); backdrop-filter:blur(6px);
+  color:var(--text-muted); border:1px solid var(--border-strong);
+}
+#project-modal{
+  background:rgba(4,6,12,0.72);
+  backdrop-filter:blur(6px);
+}
+#project-modal.flex{ display:flex; }
+
+/* -------------------- cert cards: shine sweep + verify link -------------------- */
+.cert-card{ overflow:hidden; }
+.cert-card::before{
+  content:"";
+  position:absolute; top:0; left:-60%; width:40%; height:100%;
+  background:linear-gradient(120deg, transparent, rgba(255,255,255,0.14), transparent);
+  transform:skewX(-20deg);
+  transition:left .8s ease;
+  pointer-events:none;
+  z-index:1;
+}
+.cert-card:hover::before{ left:130%; }
+.cert-verify{
+  display:inline-flex; align-items:center; gap:.4rem;
+  font-family:var(--font-mono); font-size:.65rem; letter-spacing:.04em;
+  color:var(--signal);
+  position:relative; z-index:2;
+}
+.cert-verify:hover{ text-decoration:underline; }
+
+/* -------------------- misc -------------------- */
+.hairline{ height:1px; background:var(--border); }
+.text-signal{ color:var(--signal); }
+.text-amber{ color:var(--amber); }
+.bg-panel{ background:var(--panel); }
+::selection{ background:var(--signal); color:#04120F; }
+
+a, button{ cursor:pointer; }
+
+/* focus visibility for a11y */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+  outline:2px solid var(--signal); outline-offset:2px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
+}
+
+/* AOS-safe: keep first paint sane on very small screens */
+@media (max-width:480px){
+  .grid-field{ background-size:28px 28px; }
+}
+
+/* swiper pagination color override */
+.swiper-pagination-bullet{ background:var(--text-faint); opacity:1; }
+.swiper-pagination-bullet-active{ background:var(--signal); }
+.swiper-button-next, .swiper-button-prev{ color:var(--signal) !important; }
+
+/* scrollbar */
+::-webkit-scrollbar{ width:8px; }
+::-webkit-scrollbar-track{ background:var(--bg); }
+::-webkit-scrollbar-thumb{ background:var(--border-strong); border-radius:4px; }
